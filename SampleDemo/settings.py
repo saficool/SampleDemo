@@ -31,7 +31,7 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -92,8 +92,9 @@ DATABASES = {
         'NAME': env("DATABASE_NAME"),
         'USER': env("DATABASE_USER"),
         'PASSWORD': env("DATABASE_PASSWORD"),
-        'HOST': env("DATABASE_HOST"),
-        'PORT': env("DATABASE_PORT"),
+        # 'HOST': env("DATABASE_HOST"),
+        # 'PORT': env("DATABASE_PORT"),
+        'PORT': '',
 
         'OPTIONS': {
             'driver': 'ODBC Driver 17 for SQL Server',
